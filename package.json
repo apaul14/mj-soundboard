@@ -1,0 +1,32 @@
+{
+  "name": "mj-soundboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "npm run build-watch & npm run start-server",
+    "start-server": "nodemon --watch server main.js -e html,js,css",
+    "build-watch": "webpack -w",
+    "start": "echo 'Running server for production - developers, use npm run start:dev for development' && node main",
+    "seed": "node seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apaul14/Mark-Jackson-Soundboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apaul14/Mark-Jackson-Soundboard/issues"
+  },
+  "homepage": "https://github.com/apaul14/Mark-Jackson-Soundboard#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "sequelize": "^5.21.1",
+    "volleyball": "^1.5.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
