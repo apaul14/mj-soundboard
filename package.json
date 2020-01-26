@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "npm run build-watch & npm run start-server",
-    "start-server": "nodemon --watch server main.js -e html,js,css",
+    "start-server": "nodemon --watch server app.js -e html,js,css",
     "build-watch": "webpack -w",
     "start": "echo 'Running server for production - developers, use npm run start:dev for development' && node main",
     "seed": "node seed.js"
@@ -24,9 +24,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^1.19.4",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2",
     "sequelize": "^5.21.1",
     "volleyball": "^1.5.1"
   },
