@@ -24,13 +24,17 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message || 'Internal server error')
 })
 
-app.get('/', (req, res, next) => {
-  try {
-    res.status(200).send('Hello World!')
-  } catch (error) {
-    console.log(error)
-  }
+// sends index.html
+app.use('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'))
 })
+// app.get('/', (req, res, next) => {
+//   try {
+//     res.status(200).send('Hello World!')
+//   } catch (error) {
+//     console.log(error)
+//   }
+// })
 
 
 
