@@ -1,7 +1,16 @@
 
 
+body {
+  background-color:grey;
+}
 
-
-.test {
+.title {
   color:green;
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.board {
+  align-items: center;
 }
