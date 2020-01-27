@@ -6,17 +6,9 @@ const app = express()
 const port = 3000
 
 
-app.use(express.static(path.join(__dirname, 'public')))
+//app.use(express.static(path.join(__dirname, 'public')))
 
 
-
-// app.use('*', (req, res, next) => {
-//   try {
-//     res.sendFile()
-//   } catch (error) {
-//     next(error)
-//   }
-// })
 
 
 app.use((err, req, res, next) => {
@@ -25,9 +17,8 @@ app.use((err, req, res, next) => {
 })
 
 // sends index.html
-app.use('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public/index.html'))
-})
+app.use(express.static(path.join(__dirname, "..", "public")))
+
 // app.get('/', (req, res, next) => {
 //   try {
 //     res.status(200).send('Hello World!')
